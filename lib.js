@@ -24,5 +24,5 @@ serialize = function(x){
 }
 
 deserialize = function(x){
-    return Ractive.extend(JSONfn.parse(atob(x)))
+    return JSONfn.parse(atob(x))
 }
