@@ -15,3 +15,5 @@ function init(){
 
 	// Copy the output to the receiver
 }
+
+init();
