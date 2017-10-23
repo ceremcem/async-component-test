@@ -9,7 +9,7 @@ function init(){
   }
 
   new Ractive({
-    target: '#target',
+    target: 'body',
     template: `
       <waitForIt>
         {{#partial async-loading}}Loading async component...{{/partial}}
