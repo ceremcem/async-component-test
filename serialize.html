@@ -6,12 +6,13 @@
   </head>
   <body>
     <h1>Serialize the component</h1>
+    <pre id="serialized" />
     <script>
       httpGet('myComponent.js', function(received){
         eval(received);
         console.log("serialized component: ");
         console.log(myComponentSerialized); 
-        document.getElementById("output").innerHTML = myComponentSerialized;
+        document.getElementById("serialized").innerHTML = myComponentSerialized;
       });
     </script>
   </body>
