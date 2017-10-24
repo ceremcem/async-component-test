@@ -7,3 +7,5 @@ myComponent = {
     }
   }
 }
+
+myComponentSerialized = serialize(myComponent);
