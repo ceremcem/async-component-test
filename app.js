@@ -7,7 +7,9 @@ Ractive.components.waitForIt = function(){
   });
 }
 
-new Ractive({
-  target: 'body',
-  template: '#template'
-});
+httpGet('app.html', function(template){
+    new Ractive({
+      target: 'body',
+      template: template
+    });
+})
