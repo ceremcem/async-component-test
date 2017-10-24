@@ -1,4 +1,5 @@
-httpGet('myComponent.js', function(myComponent){
+httpGet('myComponent.js', function(received){
+  eval(received);
   // 1. Serialize the component 
   console.log("serialized component: ");
   console.log(serialize(myComponent)); 
