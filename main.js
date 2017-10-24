@@ -9,11 +9,5 @@ Ractive.components.waitForIt = function(){
 
 new Ractive({
   target: 'body',
-  template: `
-    <p> In order to get serialized component string, go to: <a href="serialize.html">serialize.html</a></p>
-    <h2>Here is a async component: </h2>
-    <waitForIt>
-      {{#partial async-loading}}Loading async component...{{/partial}}
-    </waitForIt>
-  `
+  template: '#template'
 });
