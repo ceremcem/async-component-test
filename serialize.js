@@ -13,5 +13,5 @@ console.log("serialized component: ");
 console.log(serialize(myComponent)); 
 // Copy the output to the receiver
 
-document.getElementById("output").value = serialize(myComponent);
+document.getElementById("output").innerHTML = serialize(myComponent);
 
