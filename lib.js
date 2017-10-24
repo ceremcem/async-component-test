@@ -43,3 +43,14 @@ function httpGet(theUrl, callback)
     xmlhttp.open("GET", theUrl, false);
     xmlhttp.send();
 }
+
+function httpLoad(url, callback){
+    var xhr = new XMLHttpRequest();
+
+    xhr.onload = function () {
+        callback(this.response);
+    }
+
+    xhr.open('GET', url, true);
+    xhr.send();
+}
