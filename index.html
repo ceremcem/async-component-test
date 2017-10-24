@@ -6,6 +6,13 @@
   </head>
   <body>
     <h1>Loading...</h1>
+    <script id="template" type="text/ractive">
+        <p> In order to get serialized component string, go to: <a href="serialize.html">serialize.html</a></p>
+        <h2>Here is a async component: </h2>
+        <waitForIt>
+          {{#partial async-loading}}Loading async component...{{/partial}}
+        </waitForIt>
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
