@@ -8,9 +8,10 @@ myComponent = {
   }
 }
 
-function init(){
-	// 1. Serialize the component 
-	console.log("serialized component: ");
-	console.log(serialize(myComponent)); 
-	// Copy the output to the receiver
-}
+// 1. Serialize the component 
+console.log("serialized component: ");
+console.log(serialize(myComponent)); 
+// Copy the output to the receiver
+
+document.getElementById("output").value = serialize(myComponent);
+
