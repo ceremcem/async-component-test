@@ -1,6 +1,6 @@
 // Define your component without `Ractive.extend`
 myComponent = {
-  template: 'I have loaded asynchronously <button on-click="foo">foo!</button>',
+  template: '<div>I have loaded asynchronously <button on-click="foo">foo!</button></div>',
   on: {
     foo: function(){
       alert('this is foo button!');
