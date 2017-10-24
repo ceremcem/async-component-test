@@ -29,26 +29,13 @@ deserialize = function(x){
 
 function httpGet(theUrl, callback)
 {
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    xmlhttp.onreadystatechange=function()
-    {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
             callback(xmlhttp.responseText);
         }
     }
     xmlhttp.open("GET", theUrl, true);
     xmlhttp.send();
-}
-
-function httpLoad(url, callback){
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function () {
-        callback(this.response);
-    }
-    xhr.open('GET', url, true);
-    xhr.send(null);
 }
