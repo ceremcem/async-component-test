@@ -40,17 +40,15 @@ function httpGet(theUrl, callback)
             callback(xmlhttp.responseText);
         }
     }
-    xmlhttp.open("GET", theUrl, false);
+    xmlhttp.open("GET", theUrl, true);
     xmlhttp.send();
 }
 
 function httpLoad(url, callback){
     var xhr = new XMLHttpRequest();
-
     xhr.onload = function () {
         callback(this.response);
     }
-
     xhr.open('GET', url, true);
-    xhr.send();
+    xhr.send(null);
 }
