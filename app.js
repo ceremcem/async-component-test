@@ -4,8 +4,7 @@ Ractive.components.waitForIt = function(){
       eval(received);
       
       //ok(Ractive.extend(myComponent));
-      console.log("using serialized component: ");
-      console.log(myComponentSerialized);
+      myComponentSerialized = serialize(myComponent);
       ok(Ractive.extend(deserialize(myComponentSerialized)));
     })
   });
