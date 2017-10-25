@@ -9,6 +9,9 @@
     <script>
       httpGet('myComponent.js', function(received){
         eval(received);
+        // fully serialize the component in order to send over a websocket transport
+        myComponentSerialized = serialize(myComponent);
+
         console.log("serialized component: ");
         console.log(myComponentSerialized); 
         document.getElementById("serialized").innerHTML = myComponentSerialized;
