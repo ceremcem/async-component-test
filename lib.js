@@ -27,8 +27,7 @@ deserialize = function(x){
     return JSONfn.parse(atob(x))
 }
 
-function httpGet(theUrl, callback)
-{
+function httpGet(theUrl, callback){
     // code for IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp=new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){
