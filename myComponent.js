@@ -7,6 +7,3 @@ myComponent = {
     }
   }
 }
-
-// fully serialize the component in order to send over a websocket transport
-myComponentSerialized = serialize(myComponent);
