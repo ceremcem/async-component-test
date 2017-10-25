@@ -2,10 +2,7 @@ Ractive.components.waitForIt = function(){
   return new Promise(ok => {
     httpGet('myComponent.js', function(received){
       eval(received);
-      
-      //ok(Ractive.extend(myComponent));
-      myComponentSerialized = serialize(myComponent);
-      ok(Ractive.extend(deserialize(myComponentSerialized)));
+      ok(Ractive.extend(myComponent));
     })
   });
 }
